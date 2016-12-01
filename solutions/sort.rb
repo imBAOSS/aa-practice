@@ -1,10 +1,9 @@
-#### WORK IN PROGRESS ####
-
-### Sorting Problems
+### Sorting Algorithms
 # Do not modify the original array.
-# Use blocks to sort if provided.
 
 class Array
+
+  # Write a Bubble Sort algorithm with Procs
 
   def bubble_sort
     dup.bubble_sort!
@@ -27,6 +26,8 @@ class Array
 
     self
   end
+
+  # Write a Merge Sort algorithm with Procs
 
   def merge_sort(&prc)
     return self if length <= 1
@@ -72,6 +73,8 @@ class Array
   #
   #   merged
   # end
+
+  # Write a Quick Sort algorithm with Procs
 
   def quick_sort(&prc)
     return self if length <= 1
