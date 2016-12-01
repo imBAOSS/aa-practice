@@ -36,9 +36,8 @@ end
 
 def sum_rec(nums)
   return 0 if nums.empty?
-  return nums[0] if nums.length == 1
-
-  nums[0] + sum_rec(nums[1..-1])
+  return nums.first if nums.length == 1
+  nums.shift + sum_rec(nums)
 end
 
 # Write a recursive method that returns the factorial of 'num'
