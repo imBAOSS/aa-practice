@@ -1,10 +1,12 @@
+#### WORK IN PROGRESS ####
+
 ### Sorting Problems
-# Write a method for modifying the array, and not modifying the array
+# Do not modify the original array.
 # Use blocks to sort if provided.
 
 class Array
 
-  def bubble_sort(&prc)
+  def bubble_sort
   end
 
   def bubble_sort!(&prc)
@@ -13,13 +15,9 @@ class Array
   def merge_sort(&prc)
   end
 
-  def merge_sort!(&prc)
+  def merge(left, right, &prc)
   end
 
   def quick_sort(&prc)
   end
-
-  def quick_sort!(&prc)
-  end
-
 end
