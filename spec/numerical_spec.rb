@@ -1,7 +1,6 @@
 require 'rspec'
 require 'numerical'
 
-
 describe "#primes" do
   it "returns first five primes in order" do
     expect(primes(5)).to eq([2, 3, 5, 7, 11])
