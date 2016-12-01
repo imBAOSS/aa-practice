@@ -26,9 +26,14 @@ end
 def sum_rec(nums)
 end
 
+# Recursively calculate the factorial of a given number
+
+def factorial(num)
+end
+
 # Write a **recursive** implementation of a method that returns the
 # first `n` factorial numbers.
 # n_factorials(6) == [0!, 1!, 2!, 3!, 4!, 5!]
 
-def factorials_rec(num)
+def n_factorials(num)
 end
