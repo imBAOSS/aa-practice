@@ -1,5 +1,5 @@
 require 'rspec'
-require 'enumerables'
+require 'methods'
 
 describe Array do
   describe '#my_each' do
