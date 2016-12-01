@@ -8,7 +8,7 @@ class Array
 
   # Write a my_inject method. Be aware that if the default accumulator is
   # not passed then the first element of the array is used as the accumulator.
-  def my_inject(accumulator = nil)
+  def my_inject(acc = nil)
   end
 
   # Write `Array` methods `my_map` and `my_select`.
