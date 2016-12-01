@@ -7,4 +7,4 @@ Also, solve the following algorithms:
 - Merge Sort
 - Quick Sort
 
-*This is a work-in-progress. If you find a good problem, or have a better solution, please feel free to make a pull request.*
+*This is a work-in-progress. If you find a good problem, or have a better solution, please feel free to create a pull request.*
