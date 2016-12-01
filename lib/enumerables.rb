@@ -6,7 +6,7 @@ class Array
   def my_each
   end
 
-  # Writea  my_inject method. Be aware that if the default accumulator is
+  # Write a my_inject method. Be aware that if the default accumulator is
   # not passed then the first element of the array is used as the accumulator.
   def my_inject(accumulator = nil)
   end
