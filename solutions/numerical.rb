@@ -23,15 +23,6 @@ def factors(num)
   (1..num).select { |n| num % n == 0 }
 end
 
-# Write a method, `digital_root(num)`. It should Sum the digits of a positive
-# integer. If it is greater than 10, sum the digits of the resulting number.
-# Keep repeating until there is only one digit in the result, called the
-# "digital root". **Do not use string conversion within your method.**
-
-def digital_root(num)
-  num < 10 ? num : digital_root((num % 10) + digital_root(num / 10))
-end
-
 # Recursively calculate the sum of an array of values
 
 def sum_rec(nums)
@@ -44,14 +35,4 @@ end
 
 def factorial(num)
   num < 1 ? 1 : num * factorial(num - 1)
-end
-
-# Write a **recursive** implementation of a method that returns the
-# first `n` factorial numbers.
-# n_factorials(6) == [0!, 1!, 2!, 3!, 4!, 5!]
-
-def n_factorials(num)
-  return [1] if num == 1
-  set = n_factorials(num - 1)
-  set << set.last * (num - 1)
 end

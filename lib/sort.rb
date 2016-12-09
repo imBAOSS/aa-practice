@@ -3,14 +3,19 @@
 
 class Array
 
-  # Write a Bubble Sort algorithm with Procs
+  # Write a Bubble Sort algorithm with a Proc
   def bubble_sort
   end
 
   def bubble_sort!(&prc)
   end
 
-  # Write a Merge Sort algorithm with Procs
+  # Recursively Write a Bubble Sort algorithm with a Proc
+
+  def bubble_sort_rec(&prc)
+  end
+
+  # Write a Merge Sort algorithm with a Proc
 
   def merge_sort(&prc)
   end
@@ -18,7 +23,7 @@ class Array
   def merge(left, right, &prc)
   end
 
-  # Write a Quick Sort algorithm with Procs
+  # Write a Quick Sort algorithm with a Proc
 
   def quick_sort(&prc)
   end

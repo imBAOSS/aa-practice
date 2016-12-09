@@ -21,16 +21,6 @@ describe "#factors" do
   end
 end
 
-describe "#digital_root" do
-  it "calculates the digital root of a single-digit number" do
-    expect(digital_root(9)).to eq(9)
-  end
-
-  it "calculates the digital root of a larger number" do
-    expect(digital_root(4322)).to eq(2)
-  end
-end
-
 describe '#sum_rec' do
   it "returns 0 if no values are given" do
     expect(sum_rec([])).to eq(0)
@@ -70,25 +60,5 @@ describe "#factorial" do
   it "calls itself recursively" do
     expect(self).to receive(:factorial).at_least(:twice).and_call_original
     factorial(6)
-  end
-end
-
-describe "#n_factorials" do
-  it "returns first factorial number" do
-    expect(n_factorials(1)).to eq([1])
-  end
-
-  it "returns first two factorial numbers" do
-    expect(n_factorials(2)).to eq([1, 1]) # = [0!, 1!]
-  end
-
-  it "returns many factorials numbers" do
-    expect(n_factorials(6)).to eq([1, 1, 2, 6, 24, 120])
-    # == [0!, 1!, 2!, 3!, 4!, 5!]
-  end
-
-  it "calls itself recursively" do
-    expect(self).to receive(:n_factorials).at_least(:twice).and_call_original
-    n_factorials(6)
   end
 end

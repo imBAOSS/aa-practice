@@ -27,6 +27,21 @@ class Array
     self
   end
 
+  # Recursively Write a Bubble Sort algorithm with a Proc
+
+  def bubble_sort_rec(&prc)
+    return self if length <= 1
+    prc ||= proc { |a, b| a <=> b }
+
+    each_index do |i|
+      j = i + 1
+      next if j == length
+      self[i], self[j] = self[j], self[i] if prc.call(self[i], self[j]) > 0
+    end
+
+    self[0...length - 1].bubble_sort!(&prc) + [last]
+  end
+
   # Write a Merge Sort algorithm with Procs
 
   def merge_sort(&prc)

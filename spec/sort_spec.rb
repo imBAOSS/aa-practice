@@ -31,6 +31,31 @@ describe "#bubble_sort" do
   end
 end
 
+describe "#bubble_sort_rec" do
+  let(:bubble_array) { [1, 2, 3, 4, 5].shuffle }
+
+  it "works with an empty array" do
+    expect([].bubble_sort_rec).to eq([])
+  end
+
+  it "works with an array of one item" do
+    expect([1].bubble_sort_rec).to eq([1])
+  end
+
+  it "sorts numbers" do
+    expect(bubble_array.bubble_sort_rec).to eq(bubble_array.sort)
+  end
+
+  it "will use a block if given" do
+    reversed = bubble_array.bubble_sort_rec do |num1, num2|
+      # Reverse Order
+      num2 <=> num1
+    end
+    expect(reversed).to eq([5, 4, 3, 2, 1])
+  end
+
+end
+
 describe "#merge_sort" do
   let(:array) { [1, 2, 3, 4, 5].shuffle }
 
