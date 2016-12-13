@@ -36,3 +36,25 @@ end
 def factorial(num)
   num < 1 ? 1 : num * factorial(num - 1)
 end
+
+# Recursively build a Fibonacci set of num elements
+
+def fibonacci(num)
+  return num if num == 1 || num == 0
+  fibonacci(num - 1) + fibonacci(num - 2)
+end
+
+# Bonus create a method that leverages factorial to recursively create
+# an array of n number factorials
+
+def n_factorials(n)
+  return [1] if n == 1
+  n_factorials(n - 1) << find_factorial(n)
+end
+
+# Bonus create a method that leverages fibonacci to recursively create
+# an array of the nth number in the fibonacci sequence
+def n_fibonaccis(n)
+  return [fibonacci(n)] if n == 1
+  n_fibonaccis(n - 1) << fibonacci(n)
+end
