@@ -24,3 +24,14 @@ end
 
 def fibonacci(num)
 end
+
+# Bonus create a method that leverages factorial to recursively create
+# an array of n number factorials
+
+def n_factorials(n)
+end
+
+# Bonus create a method that leverages fibonacci to recursively create
+# an array of the nth number in the fibonacci sequence
+def n_fibonaccis(n)
+end

@@ -50,7 +50,7 @@ describe "#factorial" do
   end
 
   it "returns first two factorial numbers" do
-    expect(factorial(2)).to eq(2) # = [0!, 1!]
+    expect(factorial(2)).to eq(2)
   end
 
   it "returns many factorials numbers" do
@@ -60,5 +60,69 @@ describe "#factorial" do
   it "calls itself recursively" do
     expect(self).to receive(:factorial).at_least(:twice).and_call_original
     factorial(6)
+  end
+end
+
+describe "#fibonacci" do
+  it "returns 0 when no number is requested" do
+    expect(fibonacci(0)).to eq(0)
+  end
+
+  it "returns first fibonacci number" do
+    expect(fibonacci(1)).to eq(1)
+  end
+
+  it "returns second fibonacci numbers" do
+    expect(fibonacci(2)).to eq(1)
+  end
+
+  it "returns many fibonacci numbers" do
+    expect(fibonacci(6)).to eq(8)
+    expect(fibonacci(10)).to eq(55)
+  end
+
+  it "calls itself recursively" do
+    expect(self).to receive(:fibonacci).at_least(:twice).and_call_original
+    fibonacci(6)
+  end
+end
+
+describe "Bonus#n_factorials" do
+  it "returns an array with the first factorial" do
+    expect(n_factorials(1)).to eq([1])
+  end
+
+  it "returns an array with the first two factorials" do
+    expect(n_factorials(2)).to eq([1, 2])
+  end
+
+  it "returns an array of factorials" do
+    expect(n_factorials(6)).to eq([1, 2, 6, 24, 120, 720])
+    expect(n_factorials(10)).to eq([1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800])
+  end
+
+  it "calls itself recursively" do
+    expect(self).to receive(:n_factorials).at_least(:twice).and_call_original
+    n_factorials(6)
+  end
+end
+
+describe "Bonus#n_fibonaccis" do
+  it "returns an array with the first fibonacci number" do
+    expect(n_fibonaccis(1)).to eq([1])
+  end
+
+  it "returns first two fibonacci numbers" do
+    expect(n_fibonaccis(2)).to eq([1, 1])
+  end
+
+  it "returns many fibonacci numbers" do
+    expect(n_fibonaccis(6)).to eq([1, 1, 2, 3, 5, 8])
+    expect(n_fibonaccis(10)).to eq([1, 1, 2, 3, 5, 8, 13, 21, 34, 55])
+  end
+
+  it "calls itself recursively" do
+    expect(self).to receive(:n_fibonaccis).at_least(:twice).and_call_original
+    n_fibonaccis(6)
   end
 end
