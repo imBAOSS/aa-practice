@@ -39,7 +39,7 @@ class Array
       self[i], self[j] = self[j], self[i] if prc.call(self[i], self[j]) > 0
     end
 
-    self[0...length - 1].bubble_sort!(&prc) + [last]
+    self[0...length - 1].bubble_sort_rec(&prc) + [last]
   end
 
   # Write a Merge Sort algorithm with Procs
