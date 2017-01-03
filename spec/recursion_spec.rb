@@ -96,7 +96,7 @@ describe "#palindrome?" do
     expect(palindrome?("neveroddoreven")).to be_truthy
   end
 
-  it "returns false for 'ruby'" do
+  it "returns false for 'rubular'" do
     expect(palindrome?("rubular")).to be_falsey
   end
 
