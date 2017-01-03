@@ -25,6 +25,11 @@ end
 def fibonacci(num)
 end
 
+# Recursively determine if a str is a palindrome
+
+def palindrome?(str)
+end
+
 # Bonus create a method that leverages factorial to recursively create
 # an array of n number factorials
 
