@@ -1,5 +1,5 @@
 require 'rspec'
-require 'numerical'
+require 'recursion'
 
 describe "#primes" do
   it "returns first five primes in order" do
@@ -84,6 +84,24 @@ describe "#fibonacci" do
   it "calls itself recursively" do
     expect(self).to receive(:fibonacci).at_least(:twice).and_call_original
     fibonacci(6)
+  end
+end
+
+describe "#palindrome?" do
+  it "returns true for 'racecar'" do
+    expect(palindrome?("racecar")).to be_truthy
+  end
+
+  it "returns true for 'neveroddoreven'" do
+    expect(palindrome?("neveroddoreven")).to be_truthy
+  end
+
+  it "returns false for 'ruby'" do
+    expect(palindrome?("rubular")).to be_falsey
+  end
+
+  it "calls itself recursively" do
+    expect(self).to receive(:palindrome?).at_least(:once)
   end
 end
 
