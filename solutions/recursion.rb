@@ -44,6 +44,13 @@ def fibonacci(num)
   fibonacci(num - 1) + fibonacci(num - 2)
 end
 
+# Recursively determine if a str is a palindrome
+
+def palindrome?(str)
+  return true if str.length <= 1
+  str[0] == str[-1] && palindrome?(str[1..-2])
+end
+
 # Bonus create a method that leverages factorial to recursively create
 # an array of n number factorials
 
